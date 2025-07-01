@@ -1,10 +1,13 @@
-import React from 'react';
+import React, {useState} from 'react';
 import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import SkipLink from './components/SkipLink';
 import Home from './components/Home';
 import Services from "./Services.tsx";
+import Modal from "./components/Modal.tsx";
+import ContactForm from "./components/ContactForm.tsx";
 
 const App = (): React.ReactElement => {
+  const [isModalOpen, setIsModalOpen] = useState(false);
 
   return (
     <Router>
@@ -16,10 +19,10 @@ const App = (): React.ReactElement => {
             <div className="flex justify-between h-20 items-center">
               <div className="flex items-center space-x-8">
                 <Link to="/">
-                  <img 
-                    src="/justi_logo.png" 
-                    alt="JustiFacile - Accompagnement juridique simplifié" 
-                    className="h-12 w-auto"
+                  <img
+                      src="/justi_logo.png"
+                      alt="JustiFacile - Accompagnement juridique simplifié"
+                      className="h-12 w-auto"
                   />
                 </Link>
                 <ul className="flex space-x-6">
@@ -31,14 +34,20 @@ const App = (): React.ReactElement => {
                   </li>
                 </ul>
               </div>
+              <button
+                  onClick={() => setIsModalOpen(true)}
+                  className="bg-sky-600 text-white hover:bg-sky-700 px-6 py-3 rounded-lg text-base font-medium transition-colors duration-200"
+              >
+                Nous contacter
+              </button>
             </div>
           </nav>
         </header>
 
         <main id="main-content">
           <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/services" element={<Services />} />
+            <Route path="/" element={<Home/>}/>
+            <Route path="/services" element={<Services/>}/>
           </Routes>
         </main>
 
@@ -61,7 +70,7 @@ const App = (): React.ReactElement => {
                 <h3 className="text-xl font-semibold mb-4 text-gray-900">Contact</h3>
                 <p className="text-gray-700">Une question ? N'hésitez pas à nous contacter.</p>
                 <button
-                  // onClick={}
+                    onClick={() => setIsModalOpen(true)}
                   className="mt-4 bg-sky-600 text-white hover:bg-sky-700 px-4 py-2 rounded-lg text-sm font-medium transition-colors"
                 >
                   Nous contacter
@@ -75,6 +84,13 @@ const App = (): React.ReactElement => {
             </div>
           </div>
         </footer>
+        <Modal
+            isOpen={isModalOpen}
+            onClose={() => setIsModalOpen(false)}
+            title="Nous contacter"
+        >
+          <ContactForm />
+        </Modal>
       </div>
     </Router>
   );
