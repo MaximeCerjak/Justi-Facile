@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import SkipLink from './components/SkipLink';
 import Home from './components/Home';
 import Services from "./Services.tsx";
+import About from "./About.tsx";
 
 const App = (): React.ReactElement => {
 
@@ -29,6 +30,9 @@ const App = (): React.ReactElement => {
                   <li>
                     <Link to="/services" className="text-gray-700 hover:text-sky-700 transition-colors">Services</Link>
                   </li>
+                  <li>
+                    <Link to="/about" className="text-gray-700 hover:text-sky-700 transition-colors">À propos</Link>
+                  </li>
                 </ul>
               </div>
             </div>
@@ -39,6 +43,7 @@ const App = (): React.ReactElement => {
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/services" element={<Services />} />
+            <Route path="/about" element={<About />} />
           </Routes>
         </main>
 
