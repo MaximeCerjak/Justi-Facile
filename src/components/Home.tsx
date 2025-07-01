@@ -299,7 +299,7 @@ const Home = (): React.ReactElement => {
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-8">
         {/* Colonne de gauche - Recherche */}
         <div className="lg:col-span-3">
-          <section aria-labelledby="search-heading" className="bg-white rounded-xl shadow-sm p-8 sticky top-24">
+          <section className="bg-white rounded-xl shadow-sm p-8 sticky top-24">
             <SearchBar onSearch={handleSearch} />
             
             <div className="mt-8">
