@@ -1,0 +1,86 @@
+# Page snapshot
+
+```yaml
+- link "Aller au contenu principal":
+  - /url: "#main-content"
+- banner:
+  - navigation:
+    - link "JustiFacile - Accompagnement juridique simplifié":
+      - /url: /
+      - img "JustiFacile - Accompagnement juridique simplifié"
+    - list:
+      - listitem:
+        - link "Accueil":
+          - /url: /
+      - listitem:
+        - link "Services":
+          - /url: /services
+      - listitem:
+        - link "À propos":
+          - /url: /about
+    - button "Nous contacter"
+- main:
+  - search:
+    - text: Rechercher une information juridique
+    - img
+    - searchbox "Rechercher une information juridique"
+    - text: Saisissez au moins 3 caractères pour voir les suggestions.
+  - heading "Recherches populaires" [level=3]
+  - list:
+    - listitem:
+      - text: 👔
+      - heading "Licenciement économique" [level=4]
+      - paragraph: Comprendre les conditions et procédures du licenciement économique
+    - listitem:
+      - text: 🏠
+      - heading "APL (Aide Personnalisée au Logement)" [level=4]
+      - paragraph: Tout savoir sur les aides au logement
+  - region "Explorer par catégorie":
+    - heading "Explorer par catégorie" [level=2]
+    - tablist "Catégories juridiques":
+      - tab "Logement" [selected]
+      - tab "Travail"
+      - tab "Famille"
+      - tab "Santé"
+      - tab "Immobilier"
+      - tab "Consommation"
+    - tabpanel "Logement":
+      - heading "Droit du logement" [level=3]
+      - list:
+        - listitem:
+          - link "🏠 Location et bail Tout savoir sur vos droits et obligations en tant que locataire ou propriétaire":
+            - /url: "#"
+            - text: 🏠
+            - heading "Location et bail" [level=4]
+            - paragraph: Tout savoir sur vos droits et obligations en tant que locataire ou propriétaire
+        - listitem:
+          - link "💶 Aides au logement Découvrez les aides disponibles pour votre logement":
+            - /url: "#"
+            - text: 💶
+            - heading "Aides au logement" [level=4]
+            - paragraph: Découvrez les aides disponibles pour votre logement
+        - listitem:
+          - link "🏢 Copropriété Comprendre le fonctionnement et la gestion d'une copropriété":
+            - /url: "#"
+            - text: 🏢
+            - heading "Copropriété" [level=4]
+            - paragraph: Comprendre le fonctionnement et la gestion d'une copropriété
+- contentinfo:
+  - heading "À propos" [level=3]
+  - paragraph: JustiFacile rend le droit accessible à tous en simplifiant l'information juridique.
+  - heading "Liens rapides" [level=3]
+  - list:
+    - listitem:
+      - link "Mentions légales":
+        - /url: /
+    - listitem:
+      - link "Politique de confidentialité":
+        - /url: /
+    - listitem:
+      - link "Plan du site":
+        - /url: /
+  - heading "Contact" [level=3]
+  - paragraph: Une question ? N'hésitez pas à nous contacter.
+  - button "Nous contacter"
+  - paragraph: © 2024 JustiFacile - Le droit, en version simple
+```

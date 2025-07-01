@@ -7,33 +7,38 @@
     "dev": "vite",
     "build": "tsc -b && vite build",
     "lint": "eslint .",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "test:a11y": "playwright test",
+    "preview:ci": "vite preview --port 4173"
   },
   "dependencies": {
-    "react": "^19.1.0",
-    "react-dom": "^19.1.0",
     "@headlessui/react": "^2.2.0",
     "@tailwindcss/vite": "^4.1.10",
     "@types/react-router-dom": "^5.3.3",
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0",
     "react-router-dom": "^7.6.2"
   },
   "devDependencies": {
+    "@axe-core/playwright": "^4.10.2",
     "@eslint/js": "^9.29.0",
+    "@playwright/test": "^1.53.2",
     "@types/react": "^19.1.8",
     "@types/react-dom": "^19.1.6",
+    "@typescript-eslint/eslint-plugin": "^8.35.0",
+    "@typescript-eslint/parser": "^8.35.0",
     "@vitejs/plugin-react": "^4.5.2",
+    "autoprefixer": "^10.4.17",
     "eslint": "^9.29.0",
+    "eslint-plugin-jsx-a11y": "^6.8.0",
     "eslint-plugin-react-hooks": "^5.2.0",
     "eslint-plugin-react-refresh": "^0.4.20",
     "globals": "^16.2.0",
+    "playwright": "^1.53.2",
+    "postcss": "^8.4.35",
+    "tailwindcss": "^4.1.10",
     "typescript": "~5.8.3",
     "typescript-eslint": "^8.34.1",
-    "vite": "^7.0.0",
-    "@typescript-eslint/parser": "^8.35.0",
-    "@typescript-eslint/eslint-plugin": "^8.35.0",
-    "autoprefixer": "^10.4.17",
-    "eslint-plugin-jsx-a11y": "^6.8.0",
-    "postcss": "^8.4.35",
-    "tailwindcss": "^4.1.10"
+    "vite": "^7.0.0"
   }
 }
