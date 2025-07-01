@@ -5,6 +5,7 @@ import Home from './components/Home';
 import Services from "./Services.tsx";
 import Modal from "./components/Modal.tsx";
 import ContactForm from "./components/ContactForm.tsx";
+import About from "./About.tsx";
 
 const App = (): React.ReactElement => {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -32,6 +33,9 @@ const App = (): React.ReactElement => {
                   <li>
                     <Link to="/services" className="text-gray-700 hover:text-sky-700 transition-colors">Services</Link>
                   </li>
+                  <li>
+                    <Link to="/about" className="text-gray-700 hover:text-sky-700 transition-colors">À propos</Link>
+                  </li>
                 </ul>
               </div>
               <button
@@ -46,8 +50,9 @@ const App = (): React.ReactElement => {
 
         <main id="main-content">
           <Routes>
-            <Route path="/" element={<Home/>}/>
-            <Route path="/services" element={<Services/>}/>
+            <Route path="/" element={<Home />} />
+            <Route path="/services" element={<Services />} />
+            <Route path="/about" element={<About />} />
           </Routes>
         </main>
 
