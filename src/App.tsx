@@ -2,10 +2,10 @@ import React, {useState} from 'react';
 import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import SkipLink from './components/SkipLink';
 import Home from './components/Home';
-import Services from "./Services.tsx";
+import Services from "./components/Services.tsx";
 import Modal from "./components/Modal.tsx";
 import ContactForm from "./components/ContactForm.tsx";
-import About from "./About.tsx";
+import About from "./components/About.tsx";
 
 const App = (): React.ReactElement => {
   const [isModalOpen, setIsModalOpen] = useState(false);
