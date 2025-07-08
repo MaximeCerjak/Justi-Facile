@@ -12,7 +12,7 @@ for (const route of routes) {
     await page.goto(`http://localhost:4173${route.path}`);
 
     const accessibilityScanResults = await new AxeBuilder({ page })
-      .withTags(['wcag2a', 'wcag2aa']) // facultatif
+      .withTags(['wcag2a', 'wcag2aa'])
       .analyze();
 
     expect(accessibilityScanResults.violations).toEqual([]);

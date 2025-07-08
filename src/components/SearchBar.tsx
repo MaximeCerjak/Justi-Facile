@@ -92,7 +92,6 @@ const SearchBar = ({ onSearch }: SearchBarProps): React.ReactElement => {
             value={query}
             onChange={(e) => setQuery(e.target.value)}
             onKeyDown={handleKeyDown}
-            aria-controls="search-results"
             aria-describedby="search-description"
           />
           {isLoading && (
